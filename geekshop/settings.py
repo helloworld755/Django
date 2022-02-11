@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "mainapp",
+    "authnapp",
 ]
 
 MIDDLEWARE = [
@@ -84,6 +85,8 @@ DATABASES = {
     }
 }
 
+# Auth model
+AUTH_USER_MODEL = "authnapp.ShopUser"
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
