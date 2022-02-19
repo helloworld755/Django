@@ -43,7 +43,7 @@ MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
-    "django.middleware.csrf.CsrfViewMiddleware",
+    # "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
@@ -203,9 +203,11 @@ if DEBUG:
 
 
 if DEBUG:
-    MIDDLEWARE.extend([
-        "debug_toolbar.middleware.DebugToolbarMiddleware",
-    ])
+    MIDDLEWARE.extend(
+        [
+            "debug_toolbar.middleware.DebugToolbarMiddleware",
+        ]
+    )
 
 # Debgu tool bar settings
 if DEBUG:
